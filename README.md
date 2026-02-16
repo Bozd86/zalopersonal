@@ -80,6 +80,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Bozd86/zalopersonal/main/qui
 - ✅ **Restart Gateway** - Hỏi restart để nhận diện certificate
 - ✅ **Chế độ Pairing** - Kiểm soát ai được nhắn tin với bot
 - ✅ **Hỗ trợ Nhóm** - Hoạt động với cả tin nhắn riêng và nhóm
+- ✅ **Group @Mention** - Trong nhóm, bot chỉ trả lời khi được tag `@bot` (không phản hồi chat thường)
 - ✅ **Blocklist/Denylist** - Chặn người dùng không mong muốn
 - ✅ **Ổn định & Tin cậy** - Xây dựng trên thư viện zca-js đã kiểm nghiệm
 
@@ -236,6 +237,20 @@ Bot: ✅ User Bob (ID: 123456) đã bị chặn toàn cục
 - `list-allowed` - Xem danh sách user được phép
 
 Tất cả actions đều hỗ trợ resolve tên tự động.
+
+---
+
+## Hành Vi Trong Nhóm (Group)
+
+> **⚠️ Quan trọng:** Trong group chat, bot **chỉ trả lời khi được tag `@BotName`**. Tin nhắn trò chuyện bình thường trong group sẽ bị bỏ qua hoàn toàn.
+
+| Tình huống | Bot phản hồi? |
+|---|---|
+| Tin nhắn thường trong group | ❌ Không |
+| Tag `@BotName hỏi gì đó` trong group | ✅ Có |
+| Tin nhắn DM riêng | ✅ Có (theo dmPolicy) |
+
+Điều này giúp bot không gây phiền khi nằm trong group có nhiều người trò chuyện. Bot chỉ "lắng nghe" khi được gọi tên.
 
 ---
 
@@ -416,7 +431,13 @@ MIT License - xem [LICENSE](LICENSE) để biết chi tiết
 
 ## Changelog
 
-### v1.3.1 (Latest) - 2026-02-14
+### v1.4.0 (Latest) - 2026-02-16
+- ✨ **Group @Mention Filter**: Bot chỉ trả lời trong group khi được tag `@BotName`
+  - Tin nhắn trò chuyện thường trong group sẽ bị bỏ qua
+  - DM riêng không bị ảnh hưởng
+- 🔧 **Repo URL Update**: Cập nhật tất cả link GitHub sang repo mới
+
+### v1.3.1 - 2026-02-14
 - 🐛 **Fixed**: Image detection in current prompt vs history
   - Images now properly recognized as "in prompt" instead of "in history"
   - LLM vision/analysis now uses correct uploaded image
