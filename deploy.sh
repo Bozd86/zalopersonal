@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 # Deploy script - Push to GitHub and publish to npm
 # Usage: ./deploy.sh [patch|minor|major]
 
@@ -110,7 +110,7 @@ echo "╚═══════════════════════�
 echo ""
 echo "📋 Summary:"
 echo "  • Version: $CURRENT_VERSION → $NEW_VERSION"
-echo "  • GitHub: https://github.com/caochitam/zalo-personal"
+echo "  • GitHub: https://github.com/Bozd86/zalopersonal"
 echo "  • npm: https://www.npmjs.com/package/zalo-personal"
 echo ""
 echo "🔍 Verify:"

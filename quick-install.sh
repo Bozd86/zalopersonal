@@ -1,6 +1,6 @@
-#!/bin/bash
+﻿#!/bin/bash
 # Zalo Personal Extension - Quick Install Script
-# Usage: curl -fsSL https://raw.githubusercontent.com/caochitam/zalo-personal/main/quick-install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/Bozd86/zalopersonal/main/quick-install.sh | bash
 
 set -e
 
@@ -106,7 +106,7 @@ if [ -d "$HOME/.openclaw/extensions/zalo-personal" ]; then
                 echo ""
 
                 # Run update script
-                bash <(curl -fsSL https://raw.githubusercontent.com/caochitam/zalo-personal/main/script/update.sh)
+                bash <(curl -fsSL https://raw.githubusercontent.com/Bozd86/zalopersonal/main/script/update.sh)
 
                 # If update script exited successfully, we're done
                 echo ""
@@ -225,7 +225,7 @@ if [ "$ALREADY_INSTALLED" = false ] || [ "$choice" = "2" ]; then
         echo "🔍 Có thể thử:"
         echo "  1. Kiểm tra internet connection"
         echo "  2. Xem log: openclaw logs"
-        echo "  3. Báo lỗi: https://github.com/caochitam/zalo-personal/issues"
+        echo "  3. Báo lỗi: https://github.com/Bozd86/zalopersonal/issues"
         exit 1
     fi
 
@@ -322,5 +322,5 @@ if [ "$MODE" = "pairing" ]; then
     echo ""
 fi
 
-echo "📚 Docs: https://github.com/caochitam/zalo-personal"
+echo "📚 Docs: https://github.com/Bozd86/zalopersonal"
 echo ""
