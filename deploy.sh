@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 # Deploy script - Push to GitHub and publish to npm
 # Usage: ./deploy.sh [patch|minor|major]
 

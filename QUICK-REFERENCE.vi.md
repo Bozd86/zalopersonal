@@ -1,4 +1,4 @@
-﻿# Zalo Personal - Tài liệu tra cứu nhanh
+# Zalo Personal - Tài liệu tra cứu nhanh
 
 ## Setup nhanh (Khuyến nghị)
 

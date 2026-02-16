@@ -1,4 +1,4 @@
-﻿# Zalo Personal Channel Extension
+# Zalo Personal Channel Extension
 
 > Kết nối tài khoản Zalo cá nhân với OpenClaw qua đăng nhập QR code
 

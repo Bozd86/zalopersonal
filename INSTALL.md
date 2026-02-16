@@ -1,4 +1,4 @@
-﻿# 🚀 Quick Install
+# 🚀 Quick Install
 
 ## One-liner Installation
 

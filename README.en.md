@@ -1,4 +1,4 @@
-﻿# Zalo Personal Channel Extension
+# Zalo Personal Channel Extension
 
 > Connect your personal Zalo account to OpenClaw via QR code login
 
@@ -78,6 +78,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Bozd86/zalopersonal/main/qui
 - ✅ **Gateway Restart** - Optional restart prompt for certificate recognition
 - ✅ **Pairing Mode** - Control who can message your bot
 - ✅ **Group Support** - Works with both DMs and group chats
+- ✅ **Group @Mention** - In groups, bot only responds when tagged `@bot` (ignores regular chat)
 - ✅ **Stable & Reliable** - Built on battle-tested zca-js library
 
 ## Login Process
@@ -204,6 +205,20 @@ channels:
 - Unresolved names are logged as warnings (bot continues to work)
 - Numeric IDs work directly without resolution
 
+## Group Behavior
+
+> **⚠️ Important:** In group chats, the bot **only responds when tagged `@BotName`**. Regular conversation messages in the group are completely ignored.
+
+| Scenario | Bot responds? |
+|---|---|
+| Regular message in group | ❌ No |
+| Tag `@BotName ask something` in group | ✅ Yes |
+| Direct message (DM) | ✅ Yes (per dmPolicy) |
+
+This prevents the bot from being disruptive in busy group chats. It only "listens" when called by name.
+
+---
+
 ## Quick Commands
 
 ```bash
@@ -309,6 +324,12 @@ Tham gia nhóm Zalo để:
 
 ## What's New
 
+### v1.4.0 (Latest) - 2026-02-16
+- ✨ **Group @Mention Filter**: Bot only responds in groups when tagged `@BotName`
+  - Regular group chat messages are ignored
+  - DMs are not affected
+- 🔧 **Repo URL Update**: Updated all GitHub links to new repository
+
 ### v1.0.7 (2026-02-13)
 - ✅ Smart detection and cleanup of failed installations
 - ✅ Unified `quick-install.sh` script handles all scenarios
@@ -327,6 +348,6 @@ Part of the OpenClaw project
 
 ---
 
-**Version**: 1.0.9
+**Version**: 1.4.0
 **OpenClaw**: 2026.2.9+
-**Last Updated**: 2026-02-13
+**Last Updated**: 2026-02-16

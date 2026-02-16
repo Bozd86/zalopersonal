@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 # Zalo Personal Extension - Quick Install Script
 # Usage: curl -fsSL https://raw.githubusercontent.com/Bozd86/zalopersonal/main/quick-install.sh | bash
 
